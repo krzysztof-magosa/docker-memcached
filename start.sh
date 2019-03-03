@@ -3,7 +3,7 @@
 exec /usr/bin/memcached \
   -u memcached \
   -p 11211 \
-  $([ ${ENABLE_UDP} -eq 1 ] && echo - -'-U 11211') \
+  $([ ${ENABLE_UDP} -eq 1 ] && echo - '-U 11211') \
   $([ ${ENABLE_SHUTDOWN} -eq 1 ] && echo - '-A') \
   -m ${MEMORY_LIMIT} \
   $([ ${DISABLE_EVICTIONS} -eq 1 ] && echo - '-M') \
